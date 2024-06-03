@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--JAVA 와 연결할 Mapper 파일 설정-->
+<mapper namespace="org.example.hive_springboot_maven_demo.persistence.mapper.IHiveMapper">
+<!--    comedies 전체 라인수 조회 쿼리!-->
+    <select id="getComediesCount" resultType="HiveDTO">
+        select count(line_data) as cnt from hivedb.comedies
+    </select>
+</mapper>
